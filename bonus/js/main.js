@@ -27,7 +27,19 @@ const team = [
 for (let i = 0; i < team.length; i++) {
     const currentTeamMember = team[i]
     console.log(currentTeamMember['name'] + currentTeamMember['role'] + currentTeamMember['photo'])
-    cardsDom.innerHTML += `<div><img src="img/${currentTeamMember['photo']}"></div><div>${currentTeamMember['name']}</div><div>${currentTeamMember['role']}</div>`;
+    cardsDom.innerHTML += 
+        `<div class="card">
+            <div class="wrapper">
+                <img src="img/${currentTeamMember['photo']}">
+            </div>
+            <div class="name">
+                ${currentTeamMember['name']}
+            </div>
+            <div class="role">
+                ${currentTeamMember['role']}
+            </div>
+        </div>`
+    ;
 }
 
 
