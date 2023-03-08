@@ -1,3 +1,5 @@
+const cardsDom = document.querySelector('#cards')
+
 const team = [
     {
         'name':'Wayne Barnett', 'role' : 'Founder & CEO', 'photo' : 'wayne-barnett-founder-ceo.jpg'
@@ -16,12 +18,17 @@ const team = [
     },
     {
         'name':'Barbara Ramos', 'role' : 'Graphic Designer', 'photo' : 'barbara-ramos-graphic-designer.jpg'
-    },
+    }
 
 ];
 
-console.log(team);
 
-for (let key in team) {
-    console.log(team[key]);
+
+for (let i = 0; i < team.length; i++) {
+    const currentTeamMember = team[i]
+    console.log(currentTeamMember['name'] + currentTeamMember['role'] + currentTeamMember['photo'])
+    cardsDom.innerHTML += `<div>${currentTeamMember['name']} - ${currentTeamMember['role']} - ${currentTeamMember['photo']}</div>`;
 }
+
+
+
